@@ -29,6 +29,8 @@
   "extraMetadata": {
     "main": "out/main/index.js"
   },
+  "npmRebuild": false,
+  "buildDependenciesFromSource": false,
   "mac": {
     "category": "public.app-category.music",
     "target": [
