@@ -22,7 +22,8 @@
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "type-check": "tsc --noEmit",
     "validate": "npm run lint && npm run type-check && npm run test:coverage && npm run build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [
     "sheet-music",

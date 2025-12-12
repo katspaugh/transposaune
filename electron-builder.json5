@@ -29,8 +29,9 @@
   "extraMetadata": {
     "main": "out/main/index.js"
   },
-  "npmRebuild": false,
-  "buildDependenciesFromSource": false,
+  "asarUnpack": [
+    "node_modules/sharp/**/*"
+  ],
   "mac": {
     "category": "public.app-category.music",
     "target": [
