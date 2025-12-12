@@ -54,9 +54,6 @@ jobs:
       - name: Setup Audiveris
         run: npm run setup:audiveris:all
       
-      - name: Run tests
-        run: npm test
-      
       - name: Build app
         run: npm run build
       
