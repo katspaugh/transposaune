@@ -52,7 +52,7 @@ jobs:
         run: npm ci
       
       - name: Setup Audiveris
-        run: npm run setup:audiveris:all
+        run: npm run setup:audiveris
       
       - name: Build app
         run: npm run build

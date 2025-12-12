@@ -39,7 +39,6 @@
         "arch": ["x64", "arm64"]
       }
     ],
-    "icon": "resources/icon.icns",
     "hardenedRuntime": true,
     "gatekeeperAssess": false
   },
@@ -49,8 +48,7 @@
         "target": "nsis",
         "arch": ["x64"]
       }
-    ],
-    "icon": "resources/icon.ico"
+    ]
   },
   "linux": {
     "target": [
@@ -63,14 +61,11 @@
         "arch": ["x64"]
       }
     ],
-    "category": "Audio",
-    "icon": "resources/icons"
+    "category": "Audio"
   },
   "nsis": {
     "oneClick": false,
-    "allowToChangeInstallationDirectory": true,
-    "installerIcon": "resources/icon.ico",
-    "uninstallerIcon": "resources/icon.ico"
+    "allowToChangeInstallationDirectory": true
   },
   "dmg": {
     "contents": [
