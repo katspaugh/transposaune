@@ -25,12 +25,13 @@ jobs:
           - os: macos-latest
             platform: mac
             arch: x64,arm64
-          - os: windows-latest
-            platform: win
-            arch: x64
-          - os: ubuntu-latest
-            platform: linux
-            arch: x64
+          # Temporarily disabled - fix native module issues
+          # - os: windows-latest
+          #   platform: win
+          #   arch: x64
+          # - os: ubuntu-latest
+          #   platform: linux
+          #   arch: x64
     
     steps:
       - name: Checkout code
