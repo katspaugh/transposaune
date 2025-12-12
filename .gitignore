@@ -1,0 +1,14 @@
+node_modules/
+out/
+dist/
+*.log
+.DS_Store
+.beads/
+coverage/
+
+# Audiveris binaries (downloaded by setup script)
+resources/audiveris/
+resources/audiveris-*/
+resources/*.deb
+resources/*.tar.gz
+resources/*.zip

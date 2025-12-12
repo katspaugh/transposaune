@@ -1,0 +1,155 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: var(--space-xl);
+  padding-bottom: var(--space-md);
+}
+
+.app-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-xl);
+}
+
+.app-header h1 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.app-header p {
+  color: var(--color-text-secondary);
+  margin-top: var(--space-xs);
+}
+
+.app-main {
+  display: flex;
+  flex: 1;
+  gap: var(--space-xl);
+  min-height: 0;
+}
+
+.controls-panel {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.panel-title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-lg);
+}
+
+.control-group {
+  margin-bottom: var(--space-lg);
+}
+
+.control-group:last-child {
+  margin-bottom: 0;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.hint {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+.custom-transpose input {
+  margin-top: var(--space-xs);
+}
+
+.viewer-container {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewer-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--color-text-muted);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state .music-note {
+  font-size: 48px;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.empty-state .error-hint {
+  color: var(--color-danger);
+  margin-top: var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+.sheet-viewer {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow: auto;
+}
+
+.sheet-viewer-error {
+  text-align: center;
+  color: var(--color-danger);
+  padding: var(--space-xl);
+}
+
+/* Print styles */
+@media print {
+  .app-header,
+  .controls-panel,
+  .status-bar {
+    display: none !important;
+  }
+
+  .app {
+    padding: 0;
+    height: auto;
+  }
+
+  .app-main {
+    display: block;
+  }
+
+  .viewer-container {
+    width: 100%;
+  }
+
+  .viewer-panel {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .sheet-viewer {
+    overflow: visible !important;
+  }
+
+  /* Optimize for A4/Letter paper */
+  @page {
+    size: auto;
+    margin: 15mm;
+  }
+}

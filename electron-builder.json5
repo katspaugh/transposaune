@@ -1,0 +1,87 @@
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/scheme.json",
+  "appId": "com.transposaune.app",
+  "productName": "Transposaune",
+  "directories": {
+    "buildResources": "resources",
+    "output": "release"
+  },
+  "files": [
+    "out/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "resources/audiveris",
+      "to": "audiveris",
+      "filter": ["**/*"]
+    },
+    {
+      "from": "resources/audiveris-${os}-${arch}",
+      "to": "audiveris-${os}-${arch}",
+      "filter": ["**/*"]
+    },
+    {
+      "from": "resources/tessdata",
+      "to": "tessdata",
+      "filter": ["**/*"]
+    }
+  ],
+  "extraMetadata": {
+    "main": "out/main/index.js"
+  },
+  "mac": {
+    "category": "public.app-category.music",
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      }
+    ],
+    "icon": "resources/icon.icns",
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "resources/icon.ico"
+  },
+  "linux": {
+    "target": [
+      {
+        "target": "AppImage",
+        "arch": ["x64"]
+      },
+      {
+        "target": "deb",
+        "arch": ["x64"]
+      }
+    ],
+    "category": "Audio",
+    "icon": "resources/icons"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "installerIcon": "resources/icon.ico",
+    "uninstallerIcon": "resources/icon.ico"
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  }
+}
