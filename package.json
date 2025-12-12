@@ -31,7 +31,10 @@
     "audiveris",
     "musicxml"
   ],
-  "author": "",
+  "author": {
+    "name": "Transposaune Contributors",
+    "email": "transposaune@example.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "@electron-toolkit/preload": "^3.0.2",

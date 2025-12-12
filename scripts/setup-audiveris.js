@@ -168,6 +168,12 @@ async function addPlatformNativeLibs(platform, arch) {
   }
   
   if (platform === 'darwin') {
+    // Can only mount DMG on macOS
+    if (process.platform !== 'darwin') {
+      console.log(`⚠ Skipping macOS native libs (can only extract on macOS host)`)
+      return
+    }
+    
     // Download DMG for macOS native libs
     const archSuffix = arch === 'arm64' ? 'arm64' : 'x86_64'
     const dmgUrl = `${BASE_URL}/Audiveris-${AUDIVERIS_VERSION}-macosx-${archSuffix}.dmg`
