@@ -30,7 +30,8 @@
     "main": "out/main/index.js"
   },
   "asarUnpack": [
-    "node_modules/sharp/**/*"
+    "**/@img/**/*",
+    "**/sharp/**/*"
   ],
   "npmRebuild": false,
   "buildDependenciesFromSource": false,
