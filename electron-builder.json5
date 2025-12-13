@@ -32,6 +32,8 @@
   "asarUnpack": [
     "node_modules/sharp/**/*"
   ],
+  "npmRebuild": false,
+  "buildDependenciesFromSource": false,
   "mac": {
     "category": "public.app-category.music",
     "target": [
