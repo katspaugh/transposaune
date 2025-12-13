@@ -1,6 +1,6 @@
 {
   "name": "transposaune",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Sheet music transposition app using Audiveris OMR",
   "main": "out/main/index.js",
   "scripts": {
